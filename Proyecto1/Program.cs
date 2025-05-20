@@ -7,9 +7,7 @@
 // ● El Mínimo entre los dos números
 // Para TODOS los casos, no olvide contemplar siempre el caso de que el usuario no ingrese un número válido
 
-using System.Diagnostics;
-
-Console.WriteLine("-- CALCULADORA V1 --");
+Console.WriteLine("-- CALCULADORA V2 --");
 
 bool continuar = true;
 
