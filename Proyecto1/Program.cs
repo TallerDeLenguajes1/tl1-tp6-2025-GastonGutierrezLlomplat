@@ -1,19 +1,5 @@
-﻿// Ejercicio 1. Construir un programa que permita invertir un número. Verifique que el
-// texto ingresado es de hecho un número y, en caso afirmativo, realice la inversión del
-// número sólo si éste es mayor a 0.
-
-Console.WriteLine("-- INVERSION DE UN NUMERO --");
-Console.WriteLine("Ingrese un numero: ");
-
-string entrada = Console.ReadLine();
-int numero = 0;
-bool resultado = int.TryParse(entrada, out numero);
-
-if (resultado && numero > 0)
-{
-    numero = numero - 2 * numero;
-    Console.WriteLine("El numero inverso es: ");
-    Console.Write(numero);
-} else {
-    Console.WriteLine("El numero no es mayor a cero.");
-}
+﻿// Ejercicio 2. Ingrese al branch CalculadoraV1 y construya un programa que sea una
+// calculadora que permita al usuario realizar las 4 operaciones básicas (Sumar, Restar,
+// Multiplicar y Dividir) a partir de un menú para seleccionar la opción a elegir y que luego
+// pida dos números y que devuelva el resultado de la operación seleccionada. Además
+// una vez que termine de realizar la operación le pregunte si desea realizar otro cálculo.
