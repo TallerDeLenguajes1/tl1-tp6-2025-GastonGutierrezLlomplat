@@ -45,7 +45,7 @@ while (continuar)
         case 1:
             if (num1 < 0)
             {
-                Console.WriteLine($"Valor absoluto: {num1 - 2 * num1}");
+                Console.WriteLine($"Valor absoluto: {Math.Abs(num1)}");
             }
             else
             {
@@ -56,7 +56,14 @@ while (continuar)
             Console.WriteLine($"Resultado: {num1 * num1}");
             break;
         case 3:
-            Console.WriteLine($"Resultado: {Math.Sqrt(num1)}");
+            if (num1 < 0)
+            {
+                Console.WriteLine("No se puede calcular la raíz cuadrada de un número negativo.");
+            }
+            else
+            {
+                Console.WriteLine($"Resultado: {Math.Sqrt(num1)}");
+            }
             break;
         case 4:
             Console.WriteLine($"Resultado: {Math.Cos(num1)}");
@@ -67,6 +74,31 @@ while (continuar)
         case 6:
             Console.WriteLine($"Resultado: {Math.Truncate(num1)}");
             break;
+    }
+
+    // --- Comparación de dos números ---
+    Console.WriteLine("\nIngrese dos números para comparar:");
+
+    bool esValido1 = float.TryParse(Console.ReadLine(), out float numero1);
+    bool esValido2 = float.TryParse(Console.ReadLine(), out float numero2);
+
+    if (!esValido1 || !esValido2)
+    {
+        Console.WriteLine("Al menos uno de los valores ingresados no es un número válido.");
+    }
+    else
+    {
+        float max = Math.Max(numero1, numero2);
+        float min = Math.Min(numero1, numero2);
+
+        if (numero1 == numero2)
+        {
+            Console.WriteLine("Ambos números son iguales.");
+        }
+        else
+        {
+            Console.WriteLine($"El máximo es {max} y el mínimo es {min}.");
+        }
     }
 
     Console.Write("\n¿Desea realizar otro cálculo? (s/n): ");
