@@ -45,8 +45,6 @@ while (continuar)
         valido2 = float.TryParse(Console.ReadLine(), out num2);
     }
 
-    
-
     if (!valido1 || !valido2)
     {
         Console.WriteLine("Uno o ambos valores ingresados no son válidos.");
