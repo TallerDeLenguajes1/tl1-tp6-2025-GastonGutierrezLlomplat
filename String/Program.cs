@@ -20,6 +20,31 @@ foreach (char c in cadena2)
 }
 
 // Ocurrencia de una palabra
-Console.Write("Ingrese caracteres que piense que están en la cadena: ")
-string palabraBuscada = C
+Console.Write("Ingrese caracteres que piense que están en la cadena: ");
+string palabraBuscada = Console.ReadLine();
 bool contiene = mensaje.Contains(palabraBuscada);
+
+// Separar una cadena
+string cadenaSeparada = "uno-dos-tres-cuatro";
+string[] partes = cadenaSeparada.Split('-');
+
+Console.WriteLine("\nElementos separados:");
+foreach (string parte in partes)
+{
+    Console.WriteLine(parte);
+}
+
+// Convertir a mayúsculas y luego a minúsculas
+string mayus = Console.ReadLine().ToUpper();
+string minus = Console.ReadLine().ToLower();
+
+Console.WriteLine($"\nEn mayúsculas: {mayus}");
+Console.WriteLine($"En minúsculas: {minus}");
+
+// Operaciones y mensaje con ToString()
+int num1 = 5;
+int num2 = 7;
+int resultado = num1 + num2;
+
+string mensajeCalc = $"La suma de {num1} y de {num2} es igual a: {resultado.ToString()}";
+Console.WriteLine(mensajeCalc);
