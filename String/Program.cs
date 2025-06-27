@@ -22,7 +22,8 @@ foreach (char c in cadena2)
 // Ocurrencia de una palabra
 Console.Write("Ingrese caracteres que piense que están en la cadena: ");
 string palabraBuscada = Console.ReadLine();
-bool contiene = mensaje.Contains(palabraBuscada);
+bool contiene = cadena2.Contains(palabraBuscada);
+Console.WriteLine($"La cadena contiene la palabra: {contiene}");
 
 // Separar una cadena
 string cadenaSeparada = "uno-dos-tres-cuatro";
@@ -35,7 +36,9 @@ foreach (string parte in partes)
 }
 
 // Convertir a mayúsculas y luego a minúsculas
+System.Console.WriteLine("Ingrese una palabra: ");
 string mayus = Console.ReadLine().ToUpper();
+System.Console.WriteLine("Ingrese otra palabra: ");
 string minus = Console.ReadLine().ToLower();
 
 Console.WriteLine($"\nEn mayúsculas: {mayus}");
